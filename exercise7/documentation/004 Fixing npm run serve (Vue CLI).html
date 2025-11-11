@@ -1,0 +1,9 @@
+<p>In the next lecture, we will use a third-party tool (Vue CLI)&nbsp; to create a new project. This tool, under the hood, uses NodeJS - a software which you need to download as part of the next lecture.</p><p>You will learn about the details in the next lectures but in case you're getting any errors when trying to run Vue projects (via <code>npm run serve</code>, after creating them via the Vue CLI), try the following adjustment:</p><p>Replace the scripts entry in your project's <code>package.json</code> before running <code>npm run serve</code>:</p><p><strong>Windows:</strong></p><pre class="prettyprint linenums">"scripts": {  
+  "serve": "set NODE_OPTIONS=--openssl-legacy-provider &amp;&amp; vue-cli-service serve",  
+  "build": "set NODE_OPTIONS=--openssl-legacy-provider &amp;&amp; vue-cli-service build",  
+  "lint": "set NODE_OPTIONS=--openssl-legacy-provider &amp;&amp; vue-cli-service lint"
+},</pre><p><strong>Mac and Linux:</strong></p><pre class="prettyprint linenums">"scripts": {  
+  "serve": "export NODE_OPTIONS=--openssl-legacy-provider &amp;&amp; vue-cli-service serve",  
+  "build": "export NODE_OPTIONS=--openssl-legacy-provider &amp;&amp; vue-cli-service build",  
+  "lint": "export NODE_OPTIONS=--openssl-legacy-provider &amp;&amp; vue-cli-service lint"
+},</pre>
