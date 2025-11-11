@@ -6,6 +6,7 @@ createApp({
             courseGoalB: "Finish the course and learn vue B",
             // courseGoalB: "<h2>Finish the course and learn vue B</h2>",
             vueLinks: "https://vuejs.org",
+            counter:0
         };
     },
     methods:{
@@ -16,6 +17,12 @@ createApp({
             } else {
                 return this.courseGoalB
             }
+        },
+        add(){
+            this.counter++
+        },
+        reduce(){
+            this.counter--
         }
     }
 }).mount('#user-goal')
