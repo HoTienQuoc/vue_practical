@@ -6,7 +6,8 @@ createApp({
             courseGoalB: "Finish the course and learn vue B",
             // courseGoalB: "<h2>Finish the course and learn vue B</h2>",
             vueLinks: "https://vuejs.org",
-            counter:0
+            counter:0,
+            name:''
         };
     },
     methods:{
@@ -23,6 +24,9 @@ createApp({
         },
         reduce(num){
             this.counter=this.counter-num
+        },
+        setName(event){
+            this.name = event.target.value
         }
     }
 }).mount('#user-goal')
