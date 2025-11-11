@@ -18,11 +18,11 @@ createApp({
                 return this.courseGoalB
             }
         },
-        add(){
-            this.counter++
+        add(num){
+            this.counter=this.counter+num
         },
-        reduce(){
-            this.counter--
+        reduce(num){
+            this.counter=this.counter-num
         }
     }
 }).mount('#user-goal')
