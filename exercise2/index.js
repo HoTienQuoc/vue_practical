@@ -27,6 +27,9 @@ createApp({
         },
         setName(event,lastName){
             this.name = event.target.value+" "+lastName
+        },
+        submitForm(event){
+            alert("Hello World")
         }
     }
 }).mount('#user-goal')
